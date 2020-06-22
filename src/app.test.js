@@ -1,6 +1,6 @@
-import React from 'react';
-import App from './app.js';
-import { shallow } from 'enzyme';
+import React from 'react'
+import App from 'app.js'
+import { shallow } from 'enzyme'
 
 describe('Renders', () => {
   it('hello world', () => {
