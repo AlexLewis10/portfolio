@@ -6,6 +6,6 @@ describe('Renders', () => {
   it('hello world', () => {
     const wrapper = shallow(<App />)
 
-    expect(wrapper).toHaveText('Hello World')
+    expect(wrapper).toHaveText('Hello World!')
   })
 })
