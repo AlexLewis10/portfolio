@@ -2,7 +2,7 @@ import React from 'react'
 import App from './app.js'
 import { shallow } from 'enzyme'
 
-describe('About', () => {
+describe('Home', () => {
   it('Hi, I\'m Alex Lewis renders', () => {
     const wrapper = shallow(<App />)
 
