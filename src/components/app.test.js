@@ -27,4 +27,10 @@ describe('CV', () => {
 
     expect(wrapper.find(Cv)).toHaveLength(1)
   })
+
+  it('if user does not click CV the CV element is not displayed', () => {
+    const wrapper = shallow(<App />)
+
+    expect(wrapper.find(Cv)).toHaveLength(0)
+  })
 })
