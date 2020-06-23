@@ -24,6 +24,12 @@ export class App extends Component {
           <div>
             <button id='cv' className='btn' onClick={this.showCv}>CV</button>
           </div>
+          <div className='links'>
+            <a href='https://github.com/AlexLewis10/CV'>Github</a>
+            <a href='https://www.linkedin.com/in/alex-lewis-022761a8/'>LinkedIn</a>
+            <a href='https://medium.com/@alexlewis374'>Medium</a>
+            <a href='https://www.codewars.com/users/ALJALE'>CodeWars</a>
+          </div>
         </div>
       )
     }
