@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cv from './cv'
 import profilepic from '../img/profilepic.jpg'
 
 export class App extends Component {
@@ -35,7 +36,10 @@ export class App extends Component {
     }
     if (this.state.displayCv) {
       return (
-        <div><h3>CV</h3></div>
+        <div>
+          <Cv /> 
+        </div>
+        
       )
     }
   }

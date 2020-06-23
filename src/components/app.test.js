@@ -1,5 +1,6 @@
 import React from 'react'
 import App from './app.js'
+import Cv from './cv.js'
 import profilepic from '../img/profilepic.jpg'
 import { shallow } from 'enzyme'
 
@@ -15,13 +16,15 @@ describe('Home', () => {
 
     expect(wrapper).toContainReact(<img src={profilepic} alt="Alex Lewis"></img>)
   })
+})
 
-  it('clicking CV button displays the CV', () => {
+describe('CV', () => {
+  it('clicking button displays the CV element', () => {
     const wrapper = shallow(<App />)
 
     const button = wrapper.find('#cv')
     button.simulate('click')
 
-    expect(wrapper).toContainReact(<div><h3>CV</h3></div>)
+    expect(wrapper.find(Cv)).toHaveLength(1)
   })
 })
