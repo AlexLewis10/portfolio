@@ -34,3 +34,28 @@ describe('CV', () => {
     expect(wrapper.find(Cv)).toHaveLength(0)
   })
 })
+
+describe('Home', () => {
+  it('when CV is displayed, home button returns user to the home page', () => {
+    const wrapper = shallow(<App />)
+
+    const button = wrapper.find('#cv')
+    button.simulate('click')
+    const homeButton = wrapper.find('#home')
+    homeButton.simulate('click')
+
+    expect(wrapper).not.toContainReact(<h3>CV</h3>)
+  })
+})
+
+// it('returns the user to the home page', () => {
+//   const wrapper = shallow(<App />)
+//   const button = wrapper.find('#start')
+//   button.simulate('click')
+//   const homeButton = wrapper.find('#home')
+//   homeButton.simulate('click')
+//   expect(wrapper).toIncludeText('Start')
+// })
+
+
+

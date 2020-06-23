@@ -11,7 +11,13 @@ export class App extends Component {
   }
 
   showCv = () => {
-    this.setState({ displayCv: true })
+    if (this.state.displayCv) {
+      this.setState({ displayCv: false })
+    }
+    if (this.state.displayCv === false) {
+      this.setState({ displayCv: true })
+    }
+    
   }
 
   render () {
@@ -38,6 +44,7 @@ export class App extends Component {
       return (
         <div>
           <Cv /> 
+          <button id='home' className='btn' onClick={this.showCv}>Home</button>
         </div>
         
       )
