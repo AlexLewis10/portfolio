@@ -4,7 +4,7 @@ import profilepic from '../img/profilepic.jpg'
 export class App extends Component {
   render () {
     return (
-      <div>
+      <div id="mid_div">
         <img src={profilepic} alt="Alex Lewis"></img>
         <h2>Hi, I&#39;m Alex Lewis</h2>
       </div>

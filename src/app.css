@@ -1,0 +1,15 @@
+body {
+  background-color: #EFE6DD;
+}
+
+#mid_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
