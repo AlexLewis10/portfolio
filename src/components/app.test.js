@@ -13,6 +13,6 @@ describe('Home', () => {
   it('Has profilepic image', () => {
     const wrapper = shallow(<App />)
 
-    expect(wrapper).toContainReact(<img src={profilepic}></img>)
+    expect(wrapper).toContainReact(<img src={profilepic} alt="Picture of Alex Lewis"></img>)
   })
 })

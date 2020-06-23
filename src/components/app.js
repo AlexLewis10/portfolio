@@ -5,7 +5,7 @@ export class App extends Component {
   render () {
     return (
       <div>
-        <img src={profilepic}></img>
+        <img src={profilepic} alt="Picture of Alex Lewis"></img>
         <h2>Hi, I&#39;m Alex Lewis</h2>
       </div>
     )
