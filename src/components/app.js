@@ -24,9 +24,6 @@ export class App extends Component {
     if (this.state.displayCv === false) {
       return (
         <div>
-          <div>
-          <a href='../cv/AlexLewisCV.pdf' download>CEEVEE</a>
-          </div>
           <div id="mid_div">
             <img src={profilepic} alt="Alex Lewis"></img>
             <h2>Hi, I&#39;m Alex Lewis</h2>
