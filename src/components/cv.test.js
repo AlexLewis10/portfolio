@@ -1,6 +1,5 @@
 import React from 'react'
 import Cv from './cv.js'
-import App from './app'
 import { shallow } from 'enzyme'
 
 describe('CV', () => {

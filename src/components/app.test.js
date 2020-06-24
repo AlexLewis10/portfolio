@@ -47,15 +47,3 @@ describe('Home', () => {
     expect(wrapper).not.toContainReact(<h3>CV</h3>)
   })
 })
-
-// it('returns the user to the home page', () => {
-//   const wrapper = shallow(<App />)
-//   const button = wrapper.find('#start')
-//   button.simulate('click')
-//   const homeButton = wrapper.find('#home')
-//   homeButton.simulate('click')
-//   expect(wrapper).toIncludeText('Start')
-// })
-
-
-
