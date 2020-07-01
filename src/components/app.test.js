@@ -1,6 +1,6 @@
 import React from 'react'
 import App from './app.js'
-import profile from '../img/profile.jpg'
+import profile from '../img/profile.png'
 import { shallow } from 'enzyme'
 
 describe('Home', () => {
