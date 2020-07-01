@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import profile from '../img/profile.png'
 
-export class App extends Component {
+export class Home extends Component {
   constructor () {
     super()
     this.state = {
@@ -20,7 +20,7 @@ export class App extends Component {
           Feel free to take a look at my CV and my projects on Github</p>
         </div>
         <div className='links'>
-          <a href='https://github.com/AlexLewis10/CV/raw/master/AlexLewisCV.pdf' download>Download</a>
+          <a href='https://github.com/AlexLewis10/CV/raw/master/AlexLewisCV.pdf' download>CV</a>
           <a href='https://github.com/AlexLewis10/CV'>Github</a>
           <a href='https://www.linkedin.com/in/alex-lewis-022761a8/'>LinkedIn</a>
           <a href='https://medium.com/@alexlewis374'>Medium</a>
@@ -31,4 +31,4 @@ export class App extends Component {
   }
 }
 
-export default App
+export default Home
