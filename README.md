@@ -11,4 +11,9 @@ MVP:
 - Can see my CV - Eventually move to a pdf viewer.
 - Email address is shown.
 
+
+ToDo:
 - Links currently untested.
+- Fix eslint es6 issue with babel
+  - https://github.com/babel/babel-eslint
+  - https://github.com/eslint/eslint/issues/10137
