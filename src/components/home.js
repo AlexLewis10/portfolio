@@ -2,13 +2,6 @@ import React, { Component } from 'react'
 import profile from '../img/profile.png'
 
 export class Home extends Component {
-  constructor () {
-    super()
-    this.state = {
-      displayCv: false
-    }
-  }
-
   render () {
     return (
       <div>
