@@ -1,6 +1,6 @@
 import React from 'react'
 import App from './app.js'
-import profilepicmin from '../img/profilepicmin.png'
+import profilepic from '../img/profilepic.jpg'
 import { shallow } from 'enzyme'
 
 describe('Home', () => {
@@ -13,6 +13,6 @@ describe('Home', () => {
   it('has profilepic image', () => {
     const wrapper = shallow(<App />)
 
-    expect(wrapper).toContainReact(<img src={profilepicmin} alt="Alex Lewis"></img>)
+    expect(wrapper).toContainReact(<img src={profilepic} alt="Alex Lewis"></img>)
   })
 })

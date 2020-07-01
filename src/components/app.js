@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import profilepicmin from '../img/profilepicmin.png'
+import profilepic from '../img/profilepic.jpg'
 
 export class App extends Component {
   constructor () {
@@ -13,7 +13,7 @@ export class App extends Component {
     return (
       <div>
         <div id="mid_div">
-          <img src={profilepicmin} alt="Alex Lewis"></img>
+          <img src={profilepic} alt="Alex Lewis"></img>
           <h2>Hi, I&#39;m Alex Lewis</h2>
           <p>I&#39;m a junior software developer<br/>
           looking for my first job in the industry.<br/>
