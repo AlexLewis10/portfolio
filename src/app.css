@@ -17,7 +17,8 @@ img {
   height: 200px;
 }
 
-.btn {
+/* .btn not currently being used */
+/* .btn {
   margin: 2px;
   background-color: #2B2D42;
   padding: 7px;
@@ -25,7 +26,7 @@ img {
   border: none;
   width: 10%;
   transition-duration: 0.2s;
-}
+} */
 
 .btn:hover {
   background-color: #92DCE5;
