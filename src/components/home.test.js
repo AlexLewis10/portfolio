@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './home.js'
-// import Projects from ',/projects.js'
+import Projects from './projects.js'
 import profile from '../img/profile.png'
 import { shallow } from 'enzyme'
 
@@ -18,11 +18,12 @@ describe('Home', () => {
   })
 })
 
-// describe('Projects', () => {
-//   it('when clicked contains the projects element', () => {
-//     const wrapper = shallow(<Home />)
-//     const button = wrapper.find('#projects')
-//     button.simulate('click')
-//     expect(wrapper.find(Projects)).toHaveLength(1)
-//   })
-// })
+describe('Projects', () => {
+  it('when clicked contains the projects element', () => {
+    const wrapper = shallow(<Home />)
+    const button = wrapper.find('#projects')
+    button.simulate('click')
+
+    expect(wrapper.find(Projects)).toHaveLength(1)
+  })
+})
