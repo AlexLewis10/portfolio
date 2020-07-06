@@ -24,7 +24,7 @@ describe('Projects', () => {
     const button = wrapper.find('#projects')
     button.simulate('click')
 
-    expect(wrapper.find(Projects)).toHaveLength(1)
+    expect(wrapper.contains(<Projects />)).toBe(true)
   })
 })
 
@@ -37,6 +37,6 @@ describe('Home button', () => {
     const homeButton = wrapper.find('#home')
     homeButton.simulate('click')
 
-    expect(wrapper.find(Projects)).toHaveLength(0)
+    expect(wrapper.contains(<Projects />)).toBe(false)
   })
 })
