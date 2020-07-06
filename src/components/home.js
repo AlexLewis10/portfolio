@@ -10,7 +10,7 @@ export class Home extends Component {
     }
   }
 
-  sendToProjects () {
+  sendToProjects = () => {
     this.setState({ showProjects: true })
   }
 
@@ -36,7 +36,7 @@ export class Home extends Component {
         </div>
       )
     }
-    if (this.state.showProjects) {
+    if (this.state.showProjects === true) {
       return (
         <div>
           <Projects />
