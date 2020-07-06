@@ -14,6 +14,10 @@ export class Home extends Component {
     this.setState({ showProjects: true })
   }
 
+  sentToHome = () => {
+    this.setState({ showProjects: false })
+  }
+
   render () {
     if (this.state.showProjects === false) {
       return (
@@ -40,6 +44,9 @@ export class Home extends Component {
       return (
         <div>
           <Projects />
+          <div>
+          <button id="home" className="btn" onClick={this.sentToHome}>Home</button>
+          </div>
         </div>
       )
     }

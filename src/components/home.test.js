@@ -27,3 +27,16 @@ describe('Projects', () => {
     expect(wrapper.find(Projects)).toHaveLength(1)
   })
 })
+
+describe('Home button', () => {
+  it('when clicked the projects element is hidden', () => {
+    const wrapper = shallow(<Home />)
+    const button = wrapper.find('#projects')
+    button.simulate('click')
+
+    const homeButton = wrapper.find('#home')
+    homeButton.simulate('click')
+
+    expect(wrapper.find(Projects)).toHaveLength(0)
+  })
+})
