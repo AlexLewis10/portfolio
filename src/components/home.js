@@ -44,8 +44,8 @@ export class Home extends Component {
       return (
         <div>
           <Projects />
-          <div>
-          <button id="home" className="btn" onClick={this.sentToHome}>Home</button>
+          <div className='home'>
+            <button id="home" className="btn" onClick={this.sentToHome}>Home</button>
           </div>
         </div>
       )
