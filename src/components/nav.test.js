@@ -5,9 +5,9 @@ import { shallow } from 'enzyme'
 
 describe('Nav bar', () => {
   it('Contains a link to project path', () => {
-    const projectLink = <Link id='project-link' className='links' to='/projects'>Projects</Link>
     const wrapper = shallow(<Nav />)
+    const projectLink = <Link id='projects' className='links' to='/projects'>Projects</Link>
 
-    expect(wrapper).toContainReact(projectLink)
+    expect(wrapper.containsMatchingElement(projectLink)).toEqual(true)
   })
 })
