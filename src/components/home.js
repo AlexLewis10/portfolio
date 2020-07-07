@@ -17,7 +17,7 @@ export class Home extends Component {
           <div id="mid_div">
             <img src={profile} alt="Alex Lewis"></img>
             <h2>Hi, I&#39;m Alex Lewis</h2>
-            <p>I&#39;m a junior software developer<br/>
+            <p>I&#39;m a junior software developer
             looking for my first job in the industry.<br/>
             Feel free to take a look at my CV and my projects on Github</p>
           </div>
