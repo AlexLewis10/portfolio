@@ -18,9 +18,10 @@ img {
 }
 
 .links {
-  width: 10%;
+  width: 90%;
+  height: 90%;
   margin: 2px;
-  padding: 5px;
+  padding: 10px;
   background-color: #2B2D42;
   text-decoration: none;
   color: white;
@@ -31,11 +32,12 @@ img {
   background-color: #92DCE5;
 }
 
-ul {
-  display: flex;
+#mainNav {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  grid-template-rows: 40% 20% 20%;
   justify-content: center;
   flex-direction: row;
-  list-style-type: none;
 }
 
 .home {
