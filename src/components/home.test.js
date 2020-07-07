@@ -1,6 +1,5 @@
 import React from 'react'
 import Home from './home.js'
-import Projects from './projects.js'
 import profile from '../img/profile.png'
 import { shallow } from 'enzyme'
 
