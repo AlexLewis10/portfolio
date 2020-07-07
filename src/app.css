@@ -17,38 +17,25 @@ img {
   height: 200px;
 }
 
-.btn {
+.links {
   width: 10%;
   margin: 2px;
   padding: 5px;
   background-color: #2B2D42;
   text-decoration: none;
   color: white;
-  border: none;
   transition-duration: 0.2s;
 }
 
-.btn:hover {
+.links:hover {
   background-color: #92DCE5;
 }
 
-.links {
+ul {
   display: flex;
   justify-content: center;
   flex-direction: row;
-}
-a {
-  width: 10%;
-  margin: 2px;
-  padding: 5px;
-  background-color: #2B2D42;
-  text-decoration: none;
-  color: white;
-  transition-duration: 0.2s;
-}
-
-a:hover {
-  background-color: #92DCE5;
+  list-style-type: none;
 }
 
 .home {

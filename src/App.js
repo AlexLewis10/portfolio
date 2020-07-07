@@ -4,13 +4,11 @@ import { BrowserRouter as Router,
         Route } from 'react-router-dom'
 import Home from './components/home'
 import Projects from './components/projects'
-import Nav from './components/nav'
 
 function App () {
   return (
     <Router>
       <div>
-        <Nav />
         <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/projects" exact component={Projects}/> 
