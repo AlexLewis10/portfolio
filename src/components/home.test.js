@@ -17,26 +17,3 @@ describe('Home', () => {
     expect(wrapper).toContainReact(<img src={profile} alt="Alex Lewis"></img>)
   })
 })
-
-describe('Projects', () => {
-  xit('when clicked contains the projects element', () => {
-    const wrapper = shallow(<Home />)
-    const button = wrapper.find('#projects')
-    button.simulate('click')
-
-    expect(wrapper.contains(<Projects />)).toBe(true)
-  })
-})
-
-describe('Home button', () => {
-  xit('when clicked the projects element is hidden', () => {
-    const wrapper = shallow(<Home />)
-    const button = wrapper.find('#projects')
-    button.simulate('click')
-
-    const homeButton = wrapper.find('#home')
-    homeButton.simulate('click')
-
-    expect(wrapper.contains(<Projects />)).toBe(false)
-  })
-})

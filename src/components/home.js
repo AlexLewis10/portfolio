@@ -11,16 +11,7 @@ export class Home extends Component {
     }
   }
 
-  // sendToProjects = () => {
-  //   this.setState({ showProjects: true })
-  // }
-
-  // sentToHome = () => {
-  //   this.setState({ showProjects: false })
-  // }
-
   render () {
-    // if (this.state.showProjects === false) {
       return (
         <div>
           <div id="mid_div">
@@ -33,18 +24,7 @@ export class Home extends Component {
           <Nav />
         </div>
       )
-    // }
-    // if (this.state.showProjects === true) {
-    //   return (
-    //     <div>
-    //       <Projects />
-    //       <div className='home'>
-    //         <button id="home" className="btn" onClick={this.sentToHome}>Home</button>
-    //       </div>
-    //     </div>
-    //   )
-    // }
-      }
+  }
 }
 
 export default Home
