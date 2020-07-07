@@ -19,7 +19,7 @@ describe('Home', () => {
 })
 
 describe('Projects', () => {
-  it('when clicked contains the projects element', () => {
+  xit('when clicked contains the projects element', () => {
     const wrapper = shallow(<Home />)
     const button = wrapper.find('#projects')
     button.simulate('click')
@@ -29,7 +29,7 @@ describe('Projects', () => {
 })
 
 describe('Home button', () => {
-  it('when clicked the projects element is hidden', () => {
+  xit('when clicked the projects element is hidden', () => {
     const wrapper = shallow(<Home />)
     const button = wrapper.find('#projects')
     button.simulate('click')
