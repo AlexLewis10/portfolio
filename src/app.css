@@ -60,7 +60,18 @@ img {
 }
 
 .dark-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   background-color: #2B2D42;
   color: white;
 }
 
+.light-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.title {
+  display: flex;
+  margin-left: 10px;
+}

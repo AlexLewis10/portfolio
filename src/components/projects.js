@@ -10,10 +10,17 @@ class Projects extends Component {
           <h2>Projects</h2>
         </div>
         <div id='project-grid'>
-          <div className="dark-box"><p>Mission-Ctrl</p></div>
-          <div className="light-box"><p>Bank Challenge</p></div>
-          <div className="light-box"><p>React Thermostat</p></div>
-          <div className="dark-box"><p>Acebook</p></div>
+          <div className="dark-box">
+            <p className='title'>Mission-Ctrl</p>
+          </div>
+          <div className="light-box">
+            <p className='title'>Bank Challenge</p>
+          </div>
+          <div className="light-box">
+            <p className='title'>React Thermostat</p></div>
+          <div className="dark-box">
+            <p className='title'>Acebook</p>
+          </div>
         </div>
       </div>
     )
