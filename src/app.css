@@ -64,11 +64,9 @@ img {
   grid-template-columns: 1fr 3fr;
   background-color: #2B2D42;
   color: white;
-}
-
-.light-box {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .title {
@@ -77,8 +75,8 @@ img {
 }
 
 .project-image {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     overflow: hidden;
 }

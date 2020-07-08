@@ -18,11 +18,11 @@ class Projects extends Component {
             <p className='title'>Mission-Ctrl</p>
             <img className='project-image' src={missionCtrl} alt='Mission Control'></img>
           </div>
-          <div className="light-box">
+          <div className="dark-box">
             <p className='title'>Bank Challenge</p>
             <img className='project-image' src={bank} alt='Bank challenge'></img>
           </div>
-          <div className="light-box">
+          <div className="dark-box">
             <p className='title'>React Thermostat</p>
             <img className='project-image' src={thermostat} alt='Thermostat'></img>
           </div>
