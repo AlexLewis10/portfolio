@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import missionCtrl from '../img/mission-ctrl.png'
 import { Link } from 'react-router-dom'
 
 class Projects extends Component {
@@ -12,6 +13,7 @@ class Projects extends Component {
         <div id='project-grid'>
           <div className="dark-box">
             <p className='title'>Mission-Ctrl</p>
+            <img className='project-image' src={missionCtrl} alt='Mission Control'></img>
           </div>
           <div className="light-box">
             <p className='title'>Bank Challenge</p>
