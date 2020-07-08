@@ -11,3 +11,4 @@ describe('Nav bar', () => {
     expect(wrapper.containsMatchingElement(projectLink)).toEqual(true)
   })
 })
+
