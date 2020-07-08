@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import missionCtrl from '../img/mission-ctrl.png'
+import bank from '../img/bank.png'
+import thermostat from '../img/thermostat.png'
+import acebook from '../img/acebook.png'
 import { Link } from 'react-router-dom'
 
 class Projects extends Component {
@@ -17,11 +20,16 @@ class Projects extends Component {
           </div>
           <div className="light-box">
             <p className='title'>Bank Challenge</p>
+            <img className='project-image' src={bank} alt='Bank challenge'></img>
           </div>
           <div className="light-box">
-            <p className='title'>React Thermostat</p></div>
+            <p className='title'>React Thermostat</p>
+            <img className='project-image' src={thermostat} alt='Thermostat'></img>
+          </div>
+
           <div className="dark-box">
             <p className='title'>Acebook</p>
+            <img className='project-image' src={acebook} alt='Acebook'></img>
           </div>
         </div>
       </div>
