@@ -20,8 +20,6 @@ img {
 }
 
 .links {
-  width: 90%;
-  height: 90%;
   margin: 2px;
   padding: 10px;
   background-color: #2B2D42;
@@ -36,8 +34,8 @@ img {
 
 #mainNav {
   display: grid;
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: 40% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   flex-direction: row;
 }
@@ -64,7 +62,7 @@ img {
   grid-template-columns: 1fr 3fr;
   background-color: #2B2D42;
   color: white;
-  border-color: white;
+  border-color: #F8F7F9;
   border-width: 2px;
   border-style: solid;
 }
