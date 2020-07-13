@@ -89,5 +89,19 @@ ul {
   margin-block-start: 0em;
 }
 
+.project-links {
+  display: flex;
+  grid-column-start: 1;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: #2B2D42;
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.2s;
+}
 
+.project-links:hover {
+  background-color: #92DCE5;
+}
 
