@@ -14,10 +14,8 @@ MVP:
 
 ToDo:
 - Links currently untested.
-- Add links to deployed
 - DRY projects page
 - DRY css
-- Separate test files
 - Split Css file
 - Make page responsive
 
