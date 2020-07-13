@@ -17,19 +17,50 @@ class Projects extends Component {
           <div className="dark-box">
             <p className='title'>Mission-Ctrl</p>
             <img className='project-image' src={missionCtrl} alt='Mission Control'></img>
+            <ul>
+              <li>React</li>
+              <li>Node</li>
+              <li>MongoDB</li>
+              <li>Express</li>
+              <li>SASS, css</li>
+              <li>Travis</li>
+              <li>Surge</li>
+            </ul>
           </div>
           <div className="dark-box">
             <p className='title'>Bank Challenge</p>
             <img className='project-image' src={bank} alt='Bank challenge'></img>
+            <ul>
+              <li>JavaScript</li>
+              <li>NodeJS</li>
+              <li>Jest</li>
+              <li>ESlint</li>
+            </ul>
           </div>
           <div className="dark-box">
             <p className='title'>React Thermostat</p>
             <img className='project-image' src={thermostat} alt='Thermostat'></img>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Jest</li>
+              <li>Enzyme</li>
+              <li>Surge</li>
+            </ul>
           </div>
 
           <div className="dark-box">
             <p className='title'>Acebook</p>
             <img className='project-image' src={acebook} alt='Acebook'></img>
+            <ul>
+              <li>Rails</li>
+              <li>Ruby</li>
+              <li>PostgreSQL</li>
+              <li>RSpec</li>
+              <li>Capybara</li>
+              <li>Travis</li>
+              <li>Heroku</li>
+            </ul>
           </div>
         </div>
       </div>
