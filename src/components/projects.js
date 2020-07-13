@@ -26,7 +26,9 @@ class Projects extends Component {
               <li>Travis</li>
               <li>Surge</li>
             </ul>
+            <a className='project-links' href='https://github.com/AlexLewis10/mission-ctrl'>Github</a>
           </div>
+
           <div className="dark-box">
             <p className='title'>Bank Challenge</p>
             <img className='project-image' src={bank} alt='Bank challenge'></img>
@@ -36,7 +38,9 @@ class Projects extends Component {
               <li>Jest</li>
               <li>ESlint</li>
             </ul>
+            <a className='project-links' href='https://github.com/AlexLewis10/bank-tech-test2'>Github</a>
           </div>
+
           <div className="dark-box">
             <p className='title'>React Thermostat</p>
             <img className='project-image' src={thermostat} alt='Thermostat'></img>
@@ -47,6 +51,7 @@ class Projects extends Component {
               <li>Enzyme</li>
               <li>Surge</li>
             </ul>
+            <a className='project-links' href='https://github.com/AlexLewis10/react-thermostat'>Github</a>
           </div>
 
           <div className="dark-box">
@@ -61,6 +66,7 @@ class Projects extends Component {
               <li>Travis</li>
               <li>Heroku</li>
             </ul>
+            <a className='project-links' href='https://github.com/AlexLewis10/acebook-rails-template'>Github</a>
           </div>
         </div>
       </div>

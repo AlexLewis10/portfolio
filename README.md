@@ -15,5 +15,8 @@ MVP:
 ToDo:
 - Links currently untested.
 - Fix eslint es6 issue with babel
+- Style home button to fit.
   - https://github.com/babel/babel-eslint
   - https://github.com/eslint/eslint/issues/10137
+
+
