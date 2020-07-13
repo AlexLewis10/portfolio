@@ -18,6 +18,8 @@ ToDo:
 - Add links to deployed
 - DRY projects page
 - DRY css
+- Separate test files
+- Split Css file
 
 
 - Fix eslint es6 issue with babel

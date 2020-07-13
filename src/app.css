@@ -43,6 +43,7 @@ img {
 #home {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 #header-grid {
