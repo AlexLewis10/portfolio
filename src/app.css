@@ -60,7 +60,7 @@ img {
 .dark-box {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
   background-color: #2B2D42;
   color: white;
   border-color: #F8F7F9;
@@ -78,6 +78,9 @@ img {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
 }
 
 ul {
@@ -91,7 +94,7 @@ ul {
 
 .project-links {
   display: flex;
-  grid-column-start: 1;
+  grid-row-start: 4;
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
@@ -102,6 +105,22 @@ ul {
 }
 
 .project-links:hover {
+  background-color: #92DCE5;
+}
+
+.deployed-links {
+  display: flex;
+  grid-row-start: 3;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: #2B2D42;
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+.deployed-links:hover {
   background-color: #92DCE5;
 }
 

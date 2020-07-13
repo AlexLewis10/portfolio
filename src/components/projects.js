@@ -26,6 +26,7 @@ class Projects extends Component {
               <li>Travis</li>
               <li>Surge</li>
             </ul>
+            <a className='deployed-links' href='http://mission-ctrl.surge.sh/'>Take a look!</a>
             <a className='project-links' href='https://github.com/AlexLewis10/mission-ctrl'>Github</a>
           </div>
 
@@ -51,6 +52,7 @@ class Projects extends Component {
               <li>Enzyme</li>
               <li>Surge</li>
             </ul>
+            <a className='deployed-links' href='http://thermo-react.surge.sh/'>Take a look!</a>
             <a className='project-links' href='https://github.com/AlexLewis10/react-thermostat'>Github</a>
           </div>
 
@@ -66,6 +68,7 @@ class Projects extends Component {
               <li>Travis</li>
               <li>Heroku</li>
             </ul>
+            <a className='deployed-links' href='https://gapag1.herokuapp.com/'>Take a look!</a>
             <a className='project-links' href='https://github.com/AlexLewis10/acebook-rails-template'>Github</a>
           </div>
         </div>
