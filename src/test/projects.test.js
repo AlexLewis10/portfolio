@@ -1,5 +1,5 @@
 import React from 'react'
-import Projects from './projects'
+import Projects from '../components/projects'
 import { shallow } from 'enzyme'
 
 describe('Projects', () => {

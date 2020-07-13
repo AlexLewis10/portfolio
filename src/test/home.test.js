@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './home.js'
+import Home from '../components/home.js'
 import profile from '../img/profile.png'
 import { shallow } from 'enzyme'
 

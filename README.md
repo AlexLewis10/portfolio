@@ -14,12 +14,12 @@ MVP:
 
 ToDo:
 - Links currently untested.
-- Style home button to fit.
 - Add links to deployed
 - DRY projects page
 - DRY css
 - Separate test files
 - Split Css file
+- Make page responsive
 
 
 - Fix eslint es6 issue with babel
