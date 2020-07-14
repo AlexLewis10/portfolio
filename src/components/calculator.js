@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Button from '../modules/button.jsx'
 import Input from '../modules/input.jsx'
 import ClearButton from '../modules/clear-button.jsx'
+import { evaluate } from 'mathjs'
 import './calculator.css'
 
 
@@ -16,6 +17,10 @@ export class Calculator extends Component {
 
   addToInput = val => {
     this.setState({input: this.state.input + val})
+  }
+
+  handleEqual = () => {
+    this.setState({ input: evaluate(this.state.input)})
   }
 
   render() {
@@ -43,7 +48,7 @@ export class Calculator extends Component {
         <div className='row'>
           <Button handleClick={this.addToInput}>.</Button>
           <Button handleClick={this.addToInput}>0</Button>
-          <Button handleClick={this.addToInput}>=</Button>
+          <Button handleClick={() => this.handleEqual()}>=</Button>
           <Button handleClick={this.addToInput}>-</Button>
         </div>
         <ClearButton>Clear</ClearButton>
