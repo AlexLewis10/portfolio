@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
 import Button from '../modules/button.jsx'
+import Input from '../modules/input.jsx'
 import './calculator.css'
 
 
 
 export class Calculator extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      input: ''
+    }
+  }
 
 
 
   render() {
     return (
       <div>
+        <Input input={this.state.input}></Input>
         <div className='row'>
           <Button>7</Button>
           <Button>8</Button>
