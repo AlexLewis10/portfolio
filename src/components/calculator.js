@@ -51,7 +51,7 @@ export class Calculator extends Component {
           <Button handleClick={() => this.handleEqual()}>=</Button>
           <Button handleClick={this.addToInput}>-</Button>
         </div>
-        <ClearButton>Clear</ClearButton>
+        <ClearButton handleClear={() => this.setState({ input: ''})}>Clear</ClearButton>
       </div>
     )
   }
