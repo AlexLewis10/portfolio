@@ -3,8 +3,6 @@
 A website built in React to show my projects, CV and other things.
 
 
-
-
 MVP:
 - Add a brief description
 - Links to websites
@@ -18,6 +16,7 @@ ToDo:
 - DRY css
 - Split Css file
 - Make page responsive
+- When clicking a link and then returning back to the page, the page is not recognized. Believe I need to add the route to netlify.
 
 
 - Fix eslint es6 issue with babel
