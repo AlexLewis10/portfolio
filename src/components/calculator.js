@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Button from '../modules/button'
+import Button from '../modules/button.jsx'
 
 
 
