@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import profile from '../img/profile.png'
 import Nav from './nav'
+import Calculator from './calculator'
 
 
 export class Home extends Component {
@@ -22,6 +23,7 @@ export class Home extends Component {
             Feel free to take a look at my CV and my projects on Github</p>
           </div>
           <Nav />
+          <Calculator />
         </div>
       )
   }
