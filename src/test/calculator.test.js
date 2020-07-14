@@ -11,7 +11,7 @@ describe('Calculator component', () => {
   it('contains the top row of buttons', () =>{
     const wrapper = shallow(<Calculator />)
     const row = (
-      <div className='calculator'>
+      <div className='row'>
         <Button>7</Button>
         <Button>8</Button>
         <Button>9</Button>
