@@ -16,6 +16,8 @@ export class Home extends Component {
   render () {
       return (
         <div>
+
+        <div id='start-div'>
           <div id="mid_div">
             <img src={profile} alt="Alex Lewis"></img>
             <h2>Hi, I&#39;m Alex Lewis</h2>
@@ -26,10 +28,14 @@ export class Home extends Component {
           <Nav />
           <div className='smooth-scroll'>
             <Link to="mini-apps" smooth={true} duration={1000}>Mini-Apps</Link>
-          </div>
-
-          <p id='mini-apps'>Mini-Apps</p>
+          </div> 
         </div>
+          <div>
+           <p id='mini-apps'>Mini-Apps</p>
+          </div>
+        </div>
+ 
+        
       )
   }
 }
