@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #272838;
   background-color: #F3DE8A;
   flex: 1;
   outline: 1px solid #272838;
@@ -10,7 +10,7 @@
 }
 
 .operator {
-  color: black;
+  color: #272838;
   background-color: #EB9486;
   font-size: 1.4em;
 }
