@@ -1,7 +1,7 @@
 import React from 'react'
 import Calculator from '../components/calculator'
-import Button from '../modules/button'
-import Input from '../modules/input.jsx'
+import Button from '../components/calc-buttons'
+import Input from '../components/input.jsx'
 import { shallow } from 'enzyme'
 
 describe('Calculator component', () => {

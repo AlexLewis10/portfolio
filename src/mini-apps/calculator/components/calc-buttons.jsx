@@ -1,5 +1,5 @@
 import React from 'react'
-import './calc-buttons.css'
+import '../styles/calc-buttons.css'
 
 const isOperator = val => {
   return !isNaN(val) || val === "." || val === "=";

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Button from '../modules/calc-buttons.jsx'
-import Input from '../modules/input.jsx'
-import ClearButton from '../modules/clear-button.jsx'
+import Button from './calc-buttons.jsx'
+import Input from './input.jsx'
+import ClearButton from './clear-button.jsx'
 import { evaluate } from 'mathjs'
-import './calculator.css'
+import '../styles/calculator.css'
 
 
 

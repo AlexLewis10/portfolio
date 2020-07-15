@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import profile from '../img/profile.png'
 import Nav from './nav'
-import Calculator from './calculator'
+import Calculator from '../mini-apps/calculator/components/calculator'
 
 
 export class Home extends Component {

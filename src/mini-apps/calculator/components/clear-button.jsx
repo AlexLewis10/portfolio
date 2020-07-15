@@ -1,5 +1,5 @@
 import React from 'react'
-import './clear-button.css'
+import '../styles/clear-button.css'
 
 const ClearButton = (props) => (
   <div className="clear-btn" onClick={props.handleClear}>
