@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Button from '../modules/button.jsx'
+import Button from '../modules/calc-buttons.jsx'
 import Input from '../modules/input.jsx'
 import ClearButton from '../modules/clear-button.jsx'
 import { evaluate } from 'mathjs'
