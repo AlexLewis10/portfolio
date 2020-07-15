@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import profile from '../img/profile.png'
 import Nav from './nav'
 import Calculator from '../mini-apps/calculator/components/calculator'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 export class Home extends Component {
