@@ -24,7 +24,11 @@ export class Home extends Component {
             Feel free to take a look at my CV and my projects on Github</p>
           </div>
           <Nav />
-          
+          <div className='smooth-scroll'>
+            <a href="#mini-apps">Mini-Apps</a>
+          </div>
+
+          <p id='mini-apps'>Mini-Apps</p>
         </div>
       )
   }
