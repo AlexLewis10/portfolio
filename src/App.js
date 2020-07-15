@@ -11,10 +11,10 @@ function App () {
     <Router>
       <div>
         <Switch>
-        <Route path="/" exact component={Home}/>
-        <Route path="/projects" exact component={Projects}/> 
-        <Route path="/mini-apps" exact component={MiniApps}/>
-      </Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/projects" exact component={Projects}/> 
+          <Route path="/mini-apps" exact component={MiniApps}/>
+        </Switch>
       </div>
 
     </Router>

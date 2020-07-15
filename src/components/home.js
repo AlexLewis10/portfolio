@@ -23,7 +23,7 @@ export class Home extends Component {
             Feel free to take a look at my CV and my projects on Github</p>
           </div>
           <Nav />
-          <Calculator />
+          
         </div>
       )
   }
