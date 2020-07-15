@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import profile from '../img/profile.png'
 import Nav from './nav'
 import Calculator from '../mini-apps/calculator/components/calculator'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 
 export class Home extends Component {
@@ -25,7 +25,7 @@ export class Home extends Component {
           </div>
           <Nav />
           <div className='smooth-scroll'>
-            <a href="#mini-apps">Mini-Apps</a>
+            <Link to="mini-apps" smooth={true} duration={1000}>Mini-Apps</Link>
           </div>
 
           <p id='mini-apps'>Mini-Apps</p>
