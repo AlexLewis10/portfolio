@@ -1,7 +1,5 @@
 .calc-wrap {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
+  border: 1px solid #272838;
   width: 300px;
   height: 400px;
 }

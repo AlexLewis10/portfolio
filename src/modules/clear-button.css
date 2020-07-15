@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 16%;
-  color: green;
-  outline: 1px solid black;
+  color: white;
+  background-color: #7E7F9A;
+  outline: 1px solid #272838;
+  font-size: 1.4em;
 }

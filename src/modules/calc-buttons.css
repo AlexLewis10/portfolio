@@ -2,12 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: blue;
+  color: black;
+  background-color: #F3DE8A;
   flex: 1;
-  outline: 1px solid black
+  outline: 1px solid #272838;
+  font-size: 1.4em;
 }
 
 .operator {
-  color: red;
-  background-color: grey
+  color: black;
+  background-color: #EB9486;
+  font-size: 1.4em;
 }
