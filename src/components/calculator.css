@@ -1,5 +1,13 @@
+.calc-wrap {
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+  width: 300px;
+  height: 400px;
+}
+
 .row {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 16%;
+  width: 100%;
 }

@@ -25,7 +25,7 @@ export class Calculator extends Component {
 
   render() {
     return (
-      <div>
+      <div className='calc-wrap'>
         <Input input={this.state.input}></Input>
         <div className='row'>
           <Button handleClick={this.addToInput}>7</Button>
