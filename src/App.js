@@ -4,6 +4,7 @@ import { BrowserRouter as Router,
         Route } from 'react-router-dom'
 import Home from './components/home'
 import Projects from './components/projects'
+import MiniApps from './components/mini-apps'
 
 function App () {
   return (
@@ -12,6 +13,7 @@ function App () {
         <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/projects" exact component={Projects}/> 
+        <Route path="/mini-apps" exact component={MiniApps}/>
       </Switch>
       </div>
 
