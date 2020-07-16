@@ -131,7 +131,6 @@ ul {
   background-color: #92DCE5;
 }
 
-
 .smooth-scroll {
   display: flex;
   justify-content: center;
@@ -140,13 +139,19 @@ ul {
   width: 80%;
 }
 
-
 .arrow {
-  border: solid black;
+  border: solid;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
+  transition-duration: 0.2s;
 }
+
+.arrow:hover {
+  color: #92DCE5;
+}
+
+
 
 .down {
   transform: rotate(45deg);
