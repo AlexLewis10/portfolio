@@ -54,7 +54,7 @@ img {
   margin-left: 10px;
 }
 
-#header-grid {
+.header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -151,12 +151,15 @@ ul {
   color: #92DCE5;
 }
 
-
-
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-  
 
+#mini-apps {
+  height: 100vh
+}
 
+#grid-header {
+  grid-column: 2;
+}

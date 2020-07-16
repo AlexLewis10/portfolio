@@ -30,8 +30,11 @@ export class Home extends Component {
             <Link id='nav-arrow' to="mini-apps" smooth={true} duration={1000}><i className="arrow down"></i></Link>
           </div> 
         </div>
-          <div>
-           <p id='mini-apps'>Mini-Apps</p>
+          <div id='mini-apps'>
+            <div className='header-grid'>
+              <h2 id='grid-header'>Mini Apps</h2>
+            </div>
+            <Calculator />
           </div>
         </div>
  

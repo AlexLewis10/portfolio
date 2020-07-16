@@ -9,7 +9,7 @@ class Projects extends Component {
   render () {
     return (
       <div>
-        <div id="header-grid">
+        <div className="header-grid">
           <Link id='home' to='/'>Home</Link>
           <h2>Projects</h2>
         </div>
