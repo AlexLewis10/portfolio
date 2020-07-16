@@ -44,3 +44,5 @@ describe('Calculator component', () => {
     expect(wrapper).toContainReact(buttons)
   })
 })
+
+
