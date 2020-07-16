@@ -27,7 +27,7 @@ export class Home extends Component {
           </div>
           <Nav />
           <div className='smooth-scroll'>
-            <Link to="mini-apps" smooth={true} duration={1000}>Mini-Apps</Link>
+            <Link id='nav-arrow' to="mini-apps" smooth={true} duration={1000}><i className="arrow down"></i></Link>
           </div> 
         </div>
           <div>
