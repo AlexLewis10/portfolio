@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from '../components/home.js'
+import Cards from '../mini-apps/cards/cards'
 import profile from '../img/profile.png'
 import { shallow } from 'enzyme'
 
@@ -14,5 +15,13 @@ describe('Home', () => {
     const wrapper = shallow(<Home />)
 
     expect(wrapper).toContainReact(<img src={profile} alt="Alex Lewis"></img>)
+  })
+})
+
+describe('Home contains Card game', () => {
+  it('the Card component renders in home', () => {
+    const wrapper = shallow(<Home />)
+
+    expect(wrapper.find(Cards)).toHaveLength(1)
   })
 })

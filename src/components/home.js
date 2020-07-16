@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import profile from '../img/profile.png'
 import Nav from './nav'
 import Calculator from '../mini-apps/calculator/components/calculator'
+import Cards from '../mini-apps/cards/cards'
 import { Link } from "react-scroll";
 
 
@@ -35,6 +36,7 @@ export class Home extends Component {
               <h2 id='grid-header'>Mini Apps</h2>
             </div>
             <Calculator />
+            <Cards />
           </div>
         </div>
  
