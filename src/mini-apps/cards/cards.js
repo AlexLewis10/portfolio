@@ -5,6 +5,7 @@ export class Cards extends Component {
   constructor (props) {
     super(props)
     this.getCards = this.getCards.bind(this)
+    this.drawCard = this.drawCard.bind(this)
     this.state = {
       deckID: null
     }
@@ -20,7 +21,22 @@ export class Cards extends Component {
       })
   }
 
+  drawCard () {
+    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=1`)
+      .then(response => {
+        console.log(response.data.success)
+      })
+      .catch(error => {
+        return error
+      })
+  }
+
   render () {
+    if (this.state.deckID) {
+      return (
+        <button onClick={this.drawCard}>Draw</button>
+      )
+    }
     return (
       <div>
         <h3>Cards</h3>
