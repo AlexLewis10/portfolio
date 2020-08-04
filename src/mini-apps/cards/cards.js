@@ -12,7 +12,6 @@ export class Cards extends Component {
     this.state = {
       deckID: null,
       cardOne: null,
-      cardTwo: null,
       isFlipped: false,
       backOfCard: null
     }
@@ -29,11 +28,10 @@ export class Cards extends Component {
   }
 
   drawCard () {
-    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=2`)
+    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=1`)
       .then(response => {
         this.setState({
           cardOne: response.data.cards[0].image,
-          cardTwo: response.data.cards[1].image,
           backOfCard: backOfCard
         })
       })
