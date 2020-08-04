@@ -67,17 +67,6 @@ export class Cards extends Component {
               </div>
             </ReactCardFlip>
           </div>
-          <div>
-            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
-              <div>
-                {this.state.backOfCard ? showBackOfCard : null}
-              </div>
-
-              <div>
-                <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
-              </div>
-            </ReactCardFlip>
-          </div>
         </div>
       )
     }
