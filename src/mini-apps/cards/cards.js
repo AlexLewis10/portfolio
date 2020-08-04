@@ -14,14 +14,13 @@ export class Cards extends Component {
       cardOne: null,
       cardTwo: null,
       isFlipped: false,
-      backOfCard: backOfCard
+      backOfCard: null
     }
   }
 
   getCards () {
     Axios.get('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(response => {
-        console.log(response)
         this.setState({ deckID: response.data.deck_id })
       })
       .catch(error => {
@@ -34,7 +33,8 @@ export class Cards extends Component {
       .then(response => {
         this.setState({
           cardOne: response.data.cards[0].image,
-          cardTwo: response.data.cards[1].image
+          cardTwo: response.data.cards[1].image,
+          backOfCard: backOfCard
         })
       })
       .catch(error => {
@@ -54,11 +54,11 @@ export class Cards extends Component {
           <button onClick={this.drawCard}>Draw</button>
           <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
             <div>
-              <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
+              {this.state.backOfCard ? <img src={backOfCard} alt='back of card' onClick={this.handleCardFlip}></img> : null}
             </div>
 
             <div>
-              <img src={backOfCard} alt='second drawn card' onClick={this.handleCardFlip}></img>
+              <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
             </div>
           </ReactCardFlip>
         </div>
