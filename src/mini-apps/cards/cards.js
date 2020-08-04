@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import SetOne from './set-one'
 import ReactCardFlip from 'react-card-flip'
 import backOfCard from '../../img/backofcard.png'
 
