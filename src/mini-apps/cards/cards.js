@@ -3,7 +3,6 @@ import Axios from 'axios'
 import ReactCardFlip from 'react-card-flip'
 import backOfCard from '../../img/backofcard.png'
 
-
 export class Cards extends Component {
   constructor (props) {
     super(props)
