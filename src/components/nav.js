@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class Nav extends Component {
-
   render () {
     return (
-      <nav id='mainNav'>   
+      <nav id='mainNav'>
         <a className='links' href='https://github.com/AlexLewis10/CV/raw/master/AlexLewisCV.pdf' download>CV</a>
         <a className='links' href='https://github.com/AlexLewis10/CV'>Github</a>
         <Link id='projects' className='links' to='/projects'>Projects</Link>
