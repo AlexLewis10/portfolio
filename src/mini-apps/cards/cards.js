@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import ReactCardFlip from 'react-card-flip'
+import backOfCard from '../../img/backofcard.png'
+
 
 export class Cards extends Component {
   constructor (props) {
@@ -12,7 +14,8 @@ export class Cards extends Component {
       deckID: null,
       cardOne: null,
       cardTwo: null,
-      isFlipped: false
+      isFlipped: false,
+      backOfCard: backOfCard
     }
   }
 
@@ -56,7 +59,7 @@ export class Cards extends Component {
             </div>
 
             <div>
-              <img src={this.state.cardTwo} alt='second drawn card' onClick={this.handleCardFlip}></img>
+              <img src={backOfCard} alt='second drawn card' onClick={this.handleCardFlip}></img>
             </div>
           </ReactCardFlip>
         </div>
