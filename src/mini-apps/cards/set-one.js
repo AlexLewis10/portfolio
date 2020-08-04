@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 export class SetOne extends Component {
-  render() {
+  render () {
     return (
       <div>
-        
+
       </div>
     )
   }
