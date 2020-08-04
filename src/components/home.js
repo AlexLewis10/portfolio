@@ -3,8 +3,7 @@ import profile from '../img/profile.png'
 import Nav from './nav'
 import Calculator from '../mini-apps/calculator/components/calculator'
 import Cards from '../mini-apps/cards/cards'
-import { Link } from "react-scroll";
-
+import { Link } from 'react-scroll'
 
 export class Home extends Component {
   constructor () {
@@ -15,8 +14,8 @@ export class Home extends Component {
   }
 
   render () {
-      return (
-        <div>
+    return (
+      <div>
 
         <div id='start-div'>
           <div id="mid_div">
@@ -29,19 +28,17 @@ export class Home extends Component {
           <Nav />
           <div className='smooth-scroll'>
             <Link id='nav-arrow' to="mini-apps" smooth={true} duration={1000}><i className="arrow down"></i></Link>
-          </div> 
-        </div>
-          <div id='mini-apps'>
-            <div className='header-grid'>
-              <h2 id='grid-header'>Mini Apps</h2>
-            </div>
-            <Calculator />
-            <Cards />
           </div>
         </div>
- 
-        
-      )
+        <div id='mini-apps'>
+          <div className='header-grid'>
+            <h2 id='grid-header'>Mini Apps</h2>
+          </div>
+          <Calculator />
+          <Cards />
+        </div>
+      </div>
+    )
   }
 }
 

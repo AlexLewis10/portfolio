@@ -7,7 +7,8 @@ export class Cards extends Component {
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
     this.state = {
-      deckID: null
+      deckID: null,
+      card: null
     }
   }
 
@@ -24,7 +25,7 @@ export class Cards extends Component {
   drawCard () {
     Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=1`)
       .then(response => {
-        console.log(response.data.success)
+        this.setState({ card: response.data.success })
       })
       .catch(error => {
         return error
@@ -34,7 +35,10 @@ export class Cards extends Component {
   render () {
     if (this.state.deckID) {
       return (
-        <button onClick={this.drawCard}>Draw</button>
+        <div>
+          <button onClick={this.drawCard}>Draw</button>
+          <img alt='drawn card'>{this.state.card}</img>
+        </div>
       )
     }
     return (
