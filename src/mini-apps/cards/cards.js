@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import Flip from './flip'
+import ReactCardFlip from 'react-card-flip'
 
 export class Cards extends Component {
   constructor (props) {
     super(props)
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
+    this.handleCardFlip = this.handleCardFlip.bind(this)
     this.state = {
       deckID: null,
       cardOne: null,
-      cardTwo: null
+      cardTwo: null,
+      isFlipped: false
     }
   }
 
@@ -30,7 +32,7 @@ export class Cards extends Component {
       .then(response => {
         this.setState({
           cardOne: response.data.cards[0].image,
-          cardTwo: response.data.cards[0].image
+          cardTwo: response.data.cards[1].image
         })
       })
       .catch(error => {
@@ -38,13 +40,25 @@ export class Cards extends Component {
       })
   }
 
+  handleCardFlip (e) {
+    e.preventDefault()
+    this.setState({ isFlipped: !this.state.isFlipped })
+  }
+
   render () {
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <img src={this.state.cardOne} alt='drawn card'></img>
-          <img src={this.state.cardTwo} alt='second drawn card'></img>
+          <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
+            <div>
+              <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
+            </div>
+
+            <div>
+              <img src={this.state.cardTwo} alt='second drawn card' onClick={this.handleCardFlip}></img>
+            </div>
+          </ReactCardFlip>
         </div>
       )
     }
@@ -52,7 +66,6 @@ export class Cards extends Component {
       <div>
         <h3>Cards</h3>
         <button onClick={this.getCards}>New Game</button>
-        <Flip />
       </div>
 
     )
