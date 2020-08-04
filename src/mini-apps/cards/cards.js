@@ -48,13 +48,19 @@ export class Cards extends Component {
   }
 
   render () {
+    const showBackOfCard = (
+      <img
+        src={backOfCard}
+        alt='back of card'
+        onClick={this.handleCardFlip}></img>
+    )
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
           <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
             <div>
-              {this.state.backOfCard ? <img src={backOfCard} alt='back of card' onClick={this.handleCardFlip}></img> : null}
+              {this.state.backOfCard ? showBackOfCard : null}
             </div>
 
             <div>
