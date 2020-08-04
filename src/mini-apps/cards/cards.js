@@ -8,7 +8,8 @@ export class Cards extends Component {
     this.drawCard = this.drawCard.bind(this)
     this.state = {
       deckID: null,
-      card: null
+      cardOne: null,
+      cardTwo: null
     }
   }
 
@@ -23,9 +24,10 @@ export class Cards extends Component {
   }
 
   drawCard () {
-    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=1`)
+    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=2`)
       .then(response => {
-        this.setState({ card: response.data.cards[0].image })
+        this.setState({ cardOne: response.data.cards[0].image })
+        this.setState({ cardTwo: response.data.cards[1].image })
       })
       .catch(error => {
         return error
@@ -37,7 +39,8 @@ export class Cards extends Component {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <img src={this.state.card} alt='drawn card'></img>
+          <img src={this.state.cardOne} alt='drawn card'></img>
+          <img src={this.state.cardTwo} alt='second drawn card'></img>
         </div>
       )
     }
