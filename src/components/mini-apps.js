@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export class MiniApps extends Component {
-  render() {
+  render () {
     return (
       <div>
         <h2>Mini Apps</h2>
