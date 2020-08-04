@@ -26,8 +26,11 @@ export class Cards extends Component {
   drawCard () {
     Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=2`)
       .then(response => {
-        this.setState({ cardOne: response.data.cards[0].image })
-        this.setState({ cardTwo: response.data.cards[1].image })
+        this.setState({
+          cardOne: response.data.cards[0].image,
+          cardTwo: response.data.cards[1].image
+        })
+        // this.setState({ cardTwo: response.data.cards[1].image })
       })
       .catch(error => {
         return error
