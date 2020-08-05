@@ -4,16 +4,20 @@ import ReactCardFlip from 'react-card-flip'
 export class SetOne extends Component {
   constructor (props) {
     super(props)
+    this.handleCardFlip = this.handleCardFlip.bind(this)
     this.state = {
       isFlipped: false
     }
   }
 
+  handleCardFlip (e) {
+    e.preventDefault()
+    this.setState({ isFlipped: !this.state.isFlipped })
+  }
   render () {
-    console.log(props.backOfCard)
     const showBackOfCard = (
       <img
-        src={backOfCard}
+        src={this.props.backOfCard}
         alt='back of card'
         onClick={this.handleCardFlip}></img>
     )
@@ -21,11 +25,11 @@ export class SetOne extends Component {
       <div>
         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
           <div>
-            {this.state.backOfCard ? showBackOfCard : null}
+            {this.props.backOfCard ? showBackOfCard : null}
           </div>
 
           <div>
-            <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
+            <img src={this.props.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
           </div>
         </ReactCardFlip>
       </div>

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-// import ReactCardFlip from 'react-card-flip'
 import backOfCard from '../../img/backofcard.png'
-//
 import SetOne from './SetOne'
 
 export class Cards extends Component {
@@ -14,7 +12,6 @@ export class Cards extends Component {
     this.state = {
       deckID: null,
       cardOne: null,
-      // isFlipped: false,
       backOfCard: null
     }
   }
@@ -42,36 +39,16 @@ export class Cards extends Component {
       })
   }
 
-  handleCardFlip (e) {
-    e.preventDefault()
-    this.setState({ isFlipped: !this.state.isFlipped })
-  }
-
   render () {
-    // const showBackOfCard = (
-    //   <img
-    //     src={backOfCard}
-    //     alt='back of card'
-    //     onClick={this.handleCardFlip}></img>
-    // )
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
           <SetOne
             backOfCard={this.state.backOfCard}
+            handleCardFlip={this.handleCardFlip}
+            cardOne={this.state.cardOne}
           />
-          {/* <div>
-            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
-              <div>
-                {this.state.backOfCard ? showBackOfCard : null}
-              </div>
-
-              <div>
-                <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
-              </div>
-            </ReactCardFlip>
-          </div> */}
         </div>
       )
     }
