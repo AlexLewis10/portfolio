@@ -40,21 +40,19 @@ export class Cards extends Component {
   }
 
   render () {
-
+    const setOne = (
+      <SetOne
+      backOfCard={this.state.backOfCard}
+      handleCardFlip={this.handleCardFlip}
+      cardOne={this.state.cardOne}
+    />
+    )
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <SetOne
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-          />
-          <SetOne
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-          />
+          {setOne}
+          {setOne}
         </div>
       )
     }
