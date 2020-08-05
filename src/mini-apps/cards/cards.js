@@ -75,7 +75,7 @@ export class Cards extends Component {
     }
     return (
       <div>
-        <h3>Cards</h3>
+        <h3>Cards - In progress</h3>
         <button onClick={this.getCards}>New Game</button>
       </div>
 
