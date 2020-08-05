@@ -2,16 +2,19 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
 import SetOne from './SetOne'
+import SetTwo from './SetTwo'
 
 export class Cards extends Component {
   constructor (props) {
     super(props)
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
+    this.savePickedCard = this.savePickedCard.bind(this)
     this.state = {
       deckID: null,
       cardOne: null,
-      backOfCard: null
+      backOfCard: null,
+      pickOne: null
     }
   }
 
@@ -38,6 +41,10 @@ export class Cards extends Component {
       })
   }
 
+  savePickedCard (pickedCard) {
+    this.setState({ pickOne: pickedCard })
+  }
+
   render () {
     if (this.state.deckID) {
       return (
@@ -47,8 +54,9 @@ export class Cards extends Component {
             backOfCard={this.state.backOfCard}
             handleCardFlip={this.handleCardFlip}
             cardOne={this.state.cardOne}
+            savePickedCard={this.savePickedCard}
           />
-          <SetOne
+          <SetTwo
             backOfCard={this.state.backOfCard}
             handleCardFlip={this.handleCardFlip}
             cardOne={this.state.cardOne}

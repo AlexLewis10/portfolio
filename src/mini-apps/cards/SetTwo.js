@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip'
 
-export class SetOne extends Component {
+export class SetTwo extends Component {
   constructor (props) {
     super(props)
     this.handleCardFlip = this.handleCardFlip.bind(this)
@@ -13,16 +13,13 @@ export class SetOne extends Component {
   handleCardFlip (e) {
     e.preventDefault()
     this.setState({ isFlipped: !this.state.isFlipped })
-    this.props.savePickedCard("card")
   }
-
   render () {
     const showBackOfCard = (
       <img
         src={this.props.backOfCard}
         alt='back of card'
-        onClick={this.handleCardFlip}
-        ></img>
+        onClick={this.handleCardFlip}></img>
     )
     return (
       <div>
@@ -40,4 +37,4 @@ export class SetOne extends Component {
   }
 }
 
-export default SetOne
+export default SetTwo
