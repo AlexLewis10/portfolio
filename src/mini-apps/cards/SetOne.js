@@ -13,7 +13,7 @@ export class SetOne extends Component {
   handleCardFlip (e) {
     e.preventDefault()
     this.setState({ isFlipped: !this.state.isFlipped })
-    this.props.savePickedCard("card")
+    this.props.savePickedCard(this.props.cardOne)
   }
 
   render () {
