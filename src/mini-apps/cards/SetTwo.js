@@ -13,7 +13,9 @@ export class SetTwo extends Component {
   handleCardFlip (e) {
     e.preventDefault()
     this.setState({ isFlipped: !this.state.isFlipped })
+    this.props.doesCardMatch(this.props.cardOne)
   }
+  
   render () {
     const showBackOfCard = (
       <img

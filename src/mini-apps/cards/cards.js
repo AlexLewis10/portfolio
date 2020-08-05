@@ -10,6 +10,7 @@ export class Cards extends Component {
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
     this.savePickedCard = this.savePickedCard.bind(this)
+    this.doesCardMatch = this.doesCardMatch.bind(this)
     this.state = {
       deckID: null,
       cardOne: null,
@@ -45,6 +46,12 @@ export class Cards extends Component {
     this.setState({ pickOne: pickedCard })
   }
 
+  doesCardMatch (pickTwo) {
+    if (this.state.pickOne === pickTwo) {
+      alert('Match')
+    }
+  }
+
   render () {
     if (this.state.deckID) {
       return (
@@ -60,6 +67,7 @@ export class Cards extends Component {
             backOfCard={this.state.backOfCard}
             handleCardFlip={this.handleCardFlip}
             cardOne={this.state.cardOne}
+            doesCardMatch={this.doesCardMatch}
           />
 
         </div>
