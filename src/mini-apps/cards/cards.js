@@ -50,6 +50,11 @@ export class Cards extends Component {
     if (this.state.pickOne === pickTwo) {
       alert('Match')
     }
+    this.resetPickOne()
+  }
+
+  resetPickOne () {
+    this.setState({ pickOne: null })
   }
 
   render () {
