@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import ReactCardFlip from 'react-card-flip'
 import backOfCard from '../../img/backofcard.png'
+import SetOne from './SetOne'
+import SetTwo from './SetTwo'
 
 export class Cards extends Component {
   constructor (props) {
     super(props)
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
-    this.handleCardFlip = this.handleCardFlip.bind(this)
+    this.savePickedCard = this.savePickedCard.bind(this)
+    this.doesCardMatch = this.doesCardMatch.bind(this)
     this.state = {
       deckID: null,
       cardOne: null,
-      isFlipped: false,
-      backOfCard: null
+      backOfCard: null,
+      pickOne: null,
+      score: 0
     }
   }
 
@@ -40,39 +43,45 @@ export class Cards extends Component {
       })
   }
 
-  handleCardFlip (e) {
-    e.preventDefault()
-    this.setState({ isFlipped: !this.state.isFlipped })
+  savePickedCard (pickedCard) {
+    this.setState({ pickOne: pickedCard })
+  }
+
+  doesCardMatch (pickTwo) {
+      if (this.state.pickOne === pickTwo) {
+        this.setState((prevState) => ({ score: prevState.score += 1 }))
+    }
+    this.resetPickOne()
+  }
+
+  resetPickOne () {
+    this.setState({ pickOne: null })
   }
 
   render () {
-    const showBackOfCard = (
-      <img
-        src={backOfCard}
-        alt='back of card'
-        onClick={this.handleCardFlip}></img>
-    )
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <div>
-            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
-              <div>
-                {this.state.backOfCard ? showBackOfCard : null}
-              </div>
-
-              <div>
-                <img src={this.state.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
-              </div>
-            </ReactCardFlip>
-          </div>
+          <SetOne
+            backOfCard={this.state.backOfCard}
+            handleCardFlip={this.handleCardFlip}
+            cardOne={this.state.cardOne}
+            savePickedCard={this.savePickedCard}
+          />
+          <SetTwo
+            backOfCard={this.state.backOfCard}
+            handleCardFlip={this.handleCardFlip}
+            cardOne={this.state.cardOne}
+            doesCardMatch={this.doesCardMatch}
+          />
+          <p>Score: {this.state.score}</p>
         </div>
       )
     }
     return (
       <div>
-        <h3>Cards</h3>
+        <h3>Cards - In progress</h3>
         <button onClick={this.getCards}>New Game</button>
       </div>
 
