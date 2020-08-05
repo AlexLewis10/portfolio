@@ -48,8 +48,8 @@ export class Cards extends Component {
   }
 
   doesCardMatch (pickTwo) {
-    if (this.state.pickOne === pickTwo) {
-      this.setState((prevState) => ({ score: prevState.score += 1 }))
+      if (this.state.pickOne === pickTwo) {
+        this.setState((prevState) => ({ score: prevState.score += 1 }))
     }
     this.resetPickOne()
   }

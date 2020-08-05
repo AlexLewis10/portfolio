@@ -12,7 +12,9 @@ export class SetOne extends Component {
 
   handleCardFlip () {
     this.setState({ isFlipped: !this.state.isFlipped })
-    this.props.savePickedCard(this.props.cardOne)
+    if (!this.state.isFlipped) {
+      this.props.savePickedCard(this.props.cardOne)
+    }
   }
 
   render () {
@@ -21,7 +23,8 @@ export class SetOne extends Component {
         src={this.props.backOfCard}
         alt='back of card'
         onClick={this.handleCardFlip}
-        ></img>
+        >
+      </img>
     )
     return (
       <div>
