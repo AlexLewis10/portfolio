@@ -6,6 +6,6 @@ describe('Cards component', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(<Cards />)
     
-    expect(wrapper).toContainReact(<h3>Cards</h3>)
+    expect(wrapper).toContainReact(<h3>Cards - In progress</h3>)
   })
 })
