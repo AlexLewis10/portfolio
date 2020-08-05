@@ -15,7 +15,8 @@ export class Cards extends Component {
       deckID: null,
       cardOne: null,
       backOfCard: null,
-      pickOne: null
+      pickOne: null,
+      score: 0
     }
   }
 
@@ -48,7 +49,7 @@ export class Cards extends Component {
 
   doesCardMatch (pickTwo) {
     if (this.state.pickOne === pickTwo) {
-      alert('Match')
+      this.setState((prevState) => ({ score: prevState.score += 1 }))
     }
     this.resetPickOne()
   }
@@ -74,7 +75,7 @@ export class Cards extends Component {
             cardOne={this.state.cardOne}
             doesCardMatch={this.doesCardMatch}
           />
-
+          <p>Score: {this.state.score}</p>
         </div>
       )
     }
