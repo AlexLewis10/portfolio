@@ -8,7 +8,6 @@ export class Cards extends Component {
     super(props)
     this.getCards = this.getCards.bind(this)
     this.drawCard = this.drawCard.bind(this)
-    // this.handleCardFlip = this.handleCardFlip.bind(this)
     this.state = {
       deckID: null,
       cardOne: null,
@@ -40,19 +39,21 @@ export class Cards extends Component {
   }
 
   render () {
-    const setOne = (
-      <SetOne
-      backOfCard={this.state.backOfCard}
-      handleCardFlip={this.handleCardFlip}
-      cardOne={this.state.cardOne}
-    />
-    )
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          {setOne}
-          {setOne}
+          <SetOne
+            backOfCard={this.state.backOfCard}
+            handleCardFlip={this.handleCardFlip}
+            cardOne={this.state.cardOne}
+          />
+          <SetOne
+            backOfCard={this.state.backOfCard}
+            handleCardFlip={this.handleCardFlip}
+            cardOne={this.state.cardOne}
+          />
+
         </div>
       )
     }
