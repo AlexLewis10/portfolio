@@ -28,16 +28,18 @@ export class SetOne extends Component {
     )
     return (
       <div>
-        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
-          <div>
-            {this.props.backOfCard ? showBackOfCard : null}
-          </div>
+        <div>
+          <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
+            <div>
+              {this.props.backOfCard ? showBackOfCard : null}
+            </div>
 
-          <div>
-            <img src={this.props.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
-          </div>
-        </ReactCardFlip>
-      </div>
+            <div>
+              <img src={this.props.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
+            </div>
+          </ReactCardFlip>
+        </div>
+     </div>
     )
   }
 }
