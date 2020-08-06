@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
-import SetOne from './SetOne'
-import SetTwo from './SetTwo'
+import SetOneCard from './SetOneCard'
+import SetTwoCard from './SetTwoCard'
+
 
 export class Cards extends Component {
   constructor (props) {
@@ -31,10 +32,11 @@ export class Cards extends Component {
   }
 
   drawCard () {
-    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=1`)
+    Axios.get(`https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=2`)
       .then(response => {
         this.setState({
           cardOne: response.data.cards[0].image,
+          cardTwo: response.data.cards[1].image,
           backOfCard: backOfCard
         })
       })
@@ -59,22 +61,47 @@ export class Cards extends Component {
   }
 
   render () {
+    const setOne = [
+      <SetOneCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardOne}
+        savePickedCard={this.savePickedCard}
+      />,
+      <SetOneCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardTwo}
+        savePickedCard={this.savePickedCard}
+      />
+    ]
+    const renderSetOne = setOne.map((card) => 
+      <p>{card}</p>
+    )
+    const setTwo = [
+      <SetTwoCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardOne}
+        doesCardMatch={this.doesCardMatch}
+      />,
+    <SetTwoCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardTwo}
+        doesCardMatch={this.doesCardMatch}
+      />
+    ]
+    const renderSetTwo = setTwo.map((card) => 
+      <p>{card}</p>
+    )
+   
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <SetOne
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-            savePickedCard={this.savePickedCard}
-          />
-          <SetTwo
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-            doesCardMatch={this.doesCardMatch}
-          />
+          {renderSetOne}
+          {renderSetTwo}
           <p>Score: {this.state.score}</p>
         </div>
       )
@@ -84,7 +111,6 @@ export class Cards extends Component {
         <h3>Cards - In progress</h3>
         <button onClick={this.getCards}>New Game</button>
       </div>
-
     )
   }
 }

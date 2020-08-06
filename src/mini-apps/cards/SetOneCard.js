@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip'
 
-export class SetOne extends Component {
+export class SetOneCard extends Component {
   constructor (props) {
     super(props)
     this.handleCardFlip = this.handleCardFlip.bind(this)
@@ -28,18 +28,20 @@ export class SetOne extends Component {
     )
     return (
       <div>
-        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
-          <div>
-            {this.props.backOfCard ? showBackOfCard : null}
-          </div>
+        <div>
+          <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection='horizontal'>
+            <div>
+              {this.props.backOfCard ? showBackOfCard : null}
+            </div>
 
-          <div>
-            <img src={this.props.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
-          </div>
-        </ReactCardFlip>
-      </div>
+            <div>
+              <img src={this.props.cardOne} alt='drawn card' onClick={this.handleCardFlip}></img>
+            </div>
+          </ReactCardFlip>
+        </div>
+     </div>
     )
   }
 }
 
-export default SetOne
+export default SetOneCard
