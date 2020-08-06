@@ -3,6 +3,8 @@ import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
 import SetOne from './SetOne'
 import SetTwo from './SetTwo'
+import Wot from './Wot'
+
 
 export class Cards extends Component {
   constructor (props) {
@@ -59,16 +61,30 @@ export class Cards extends Component {
   }
 
   render () {
+    const items = [
+      <SetOne
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardOne}
+        savePickedCard={this.savePickedCard}
+      />,
+      <SetOne
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardOne}
+        savePickedCard={this.savePickedCard}
+      />
+    ]
+    const helloComponents = items.map((item) => 
+      <p>{item}</p>
+    )
+
+   
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          <SetOne
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-            savePickedCard={this.savePickedCard}
-          />
+          {helloComponents}
           <SetTwo
             backOfCard={this.state.backOfCard}
             handleCardFlip={this.handleCardFlip}
@@ -84,7 +100,6 @@ export class Cards extends Component {
         <h3>Cards - In progress</h3>
         <button onClick={this.getCards}>New Game</button>
       </div>
-
     )
   }
 }
