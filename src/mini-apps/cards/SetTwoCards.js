@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip'
 
-export class SetTwo extends Component {
+export class SetTwoCards extends Component {
   constructor (props) {
     super(props)
     this.handleCardFlip = this.handleCardFlip.bind(this)
@@ -38,4 +38,4 @@ export class SetTwo extends Component {
   }
 }
 
-export default SetTwo
+export default SetTwoCards

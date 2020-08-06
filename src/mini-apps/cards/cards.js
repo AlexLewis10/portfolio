@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
 import SetOneCards from './SetOneCards'
-import SetTwo from './SetTwo'
+import SetTwoCards from './SetTwoCards'
 
 
 export class Cards extends Component {
@@ -78,19 +78,30 @@ export class Cards extends Component {
     const cards = setOne.map((card) => 
       <p>{card}</p>
     )
-
+    const setTwo = [
+      <SetTwoCards
+      backOfCard={this.state.backOfCard}
+      handleCardFlip={this.handleCardFlip}
+      cardOne={this.state.cardOne}
+      doesCardMatch={this.doesCardMatch}
+    />,
+    <SetTwoCards
+      backOfCard={this.state.backOfCard}
+      handleCardFlip={this.handleCardFlip}
+      cardOne={this.state.cardTwo}
+      doesCardMatch={this.doesCardMatch}
+    />
+    ]
+    const cardsTwo = setTwo.map((card) => 
+      <p>{card}</p>
+    )
    
     if (this.state.deckID) {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
           {cards}
-          <SetTwo
-            backOfCard={this.state.backOfCard}
-            handleCardFlip={this.handleCardFlip}
-            cardOne={this.state.cardOne}
-            doesCardMatch={this.doesCardMatch}
-          />
+          {cardsTwo}
           <p>Score: {this.state.score}</p>
         </div>
       )
