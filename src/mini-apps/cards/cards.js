@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
-import SetOneCards from './SetOneCards'
-import SetTwoCards from './SetTwoCards'
+import SetOneCard from './SetOneCard'
+import SetTwoCard from './SetTwoCard'
 
 
 export class Cards extends Component {
@@ -62,37 +62,37 @@ export class Cards extends Component {
 
   render () {
     const setOne = [
-      <SetOneCards
+      <SetOneCard
         backOfCard={this.state.backOfCard}
         handleCardFlip={this.handleCardFlip}
         cardOne={this.state.cardOne}
         savePickedCard={this.savePickedCard}
       />,
-      <SetOneCards
+      <SetOneCard
         backOfCard={this.state.backOfCard}
         handleCardFlip={this.handleCardFlip}
         cardOne={this.state.cardTwo}
         savePickedCard={this.savePickedCard}
       />
     ]
-    const cards = setOne.map((card) => 
+    const renderSetOne = setOne.map((card) => 
       <p>{card}</p>
     )
     const setTwo = [
-      <SetTwoCards
-      backOfCard={this.state.backOfCard}
-      handleCardFlip={this.handleCardFlip}
-      cardOne={this.state.cardOne}
-      doesCardMatch={this.doesCardMatch}
-    />,
-    <SetTwoCards
-      backOfCard={this.state.backOfCard}
-      handleCardFlip={this.handleCardFlip}
-      cardOne={this.state.cardTwo}
-      doesCardMatch={this.doesCardMatch}
-    />
+      <SetTwoCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardOne}
+        doesCardMatch={this.doesCardMatch}
+      />,
+    <SetTwoCard
+        backOfCard={this.state.backOfCard}
+        handleCardFlip={this.handleCardFlip}
+        cardOne={this.state.cardTwo}
+        doesCardMatch={this.doesCardMatch}
+      />
     ]
-    const cardsTwo = setTwo.map((card) => 
+    const renderSetTwo = setTwo.map((card) => 
       <p>{card}</p>
     )
    
@@ -100,8 +100,8 @@ export class Cards extends Component {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          {cards}
-          {cardsTwo}
+          {renderSetOne}
+          {renderSetTwo}
           <p>Score: {this.state.score}</p>
         </div>
       )
