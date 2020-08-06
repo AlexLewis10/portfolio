@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import backOfCard from '../../img/backofcard.png'
-import SetOne from './SetOne'
+import SetOneCards from './SetOneCards'
 import SetTwo from './SetTwo'
-import Wot from './Wot'
 
 
 export class Cards extends Component {
@@ -62,13 +61,13 @@ export class Cards extends Component {
 
   render () {
     const items = [
-      <SetOne
+      <SetOneCards
         backOfCard={this.state.backOfCard}
         handleCardFlip={this.handleCardFlip}
         cardOne={this.state.cardOne}
         savePickedCard={this.savePickedCard}
       />,
-      <SetOne
+      <SetOneCards
         backOfCard={this.state.backOfCard}
         handleCardFlip={this.handleCardFlip}
         cardOne={this.state.cardOne}
