@@ -60,7 +60,7 @@ export class Cards extends Component {
   }
 
   render () {
-    const items = [
+    const setOne = [
       <SetOneCards
         backOfCard={this.state.backOfCard}
         handleCardFlip={this.handleCardFlip}
@@ -74,8 +74,8 @@ export class Cards extends Component {
         savePickedCard={this.savePickedCard}
       />
     ]
-    const helloComponents = items.map((item) => 
-      <p>{item}</p>
+    const cards = setOne.map((card) => 
+      <p>{card}</p>
     )
 
    
@@ -83,7 +83,7 @@ export class Cards extends Component {
       return (
         <div>
           <button onClick={this.drawCard}>Draw</button>
-          {helloComponents}
+          {cards}
           <SetTwo
             backOfCard={this.state.backOfCard}
             handleCardFlip={this.handleCardFlip}
